@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Edit Data Mahasiswa</title>
+
+	<script src="/js/angular.min.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+	<script src="/coba-app.js"></script>
+	<script src="/edit-controller.js"></script>
+</head>
+<body class="container" ng-app="CobaApp">
+
+	<div class="jumbotron">
+		<h1>Edit Data Barang</h1>
+	</div>
+
+	<div ng-controller="EditController">
+		<form>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">ID</label>
+				<input type="text" class="col-sm-4 form-control"
+						placeholder="ID" ng-model="mhs.nim" 
+						readonly="true" />
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">JENIS</label>
+				<input type="text" class="col-sm-4 form-control" 
+						placeholder="JENIS" ng-model="mhs.nama" />
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">NAMA BARANG</label>
+				<input type="text" class="col-sm-4 form-control" 
+						placeholder="NAMA BARANG" ng-model="mhs.jurusan" />
+			</div>
+			<div class="form-group row">
+				<button class="btn btn-primary col-pr-2" ng-click="simpan()">
+					Simpan
+				</button>
+				<button class="btn btn-warning col-sm-2" ng-click="batal()">
+					Batal
+				</button>
+			</div>
+		</form>
+	</div>
+	
+</body>
+</html>
